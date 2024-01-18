@@ -13,10 +13,10 @@ cloudflare_ips_script="/etc/cron.daily/cloudflareips"
 line_to_find_allow="# add it to csf.ignore"
 
 # Line to add under it in csf.allow
-line_to_add_allow="Include /etc/csf/cloudflare.allow # CloudFlare IPs"
+line_to_add_allow="Include /etc/csf/cloudflare.allow"
 
 # Line to add under 127.0.0.1 in csf.ignore
-line_to_add_ignore="Include /etc/csf/cloudflare.allow # CloudFlare IPs"
+line_to_add_ignore="Include /etc/csf/cloudflare.allow"
 
 # CloudFlare IPs List URLs
 cloudflare_ips=`curl -s https://www.cloudflare.com/ips-v4`
