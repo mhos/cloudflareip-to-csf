@@ -1,1 +1,16 @@
-This Bash script, is designed to automate the daily update of CloudFlare IP lists on a server. It first defines various file paths related to CSF (ConfigServer Security & Firewall), including the paths for csf.allow, csf.ignore, and a custom script for CloudFlare IPs. The script then retrieves the current list of CloudFlare IPv4 and IPv6 addresses using curl, updates the csf/cloudflare.allow file with the new IPs, and checks and modifies the csf.allow and csf.ignore files accordingly. Finally, it restarts CSF/LFD (ConfigServer Firewall and Login Failure Daemon) and creates a cron job in /etc/cron.daily/cloudflareips to automate this process daily. The script ensures that the server's CSF is configured to allow CloudFlare IPs and keeps the configurations up to date.
+## CloudFlare IP Update Script
+
+This Bash script, created by Casey O'Connor, automates the daily update of CloudFlare IP lists on a server. It performs the following tasks:
+
+1. Retrieves current CloudFlare IPv4 and IPv6 addresses.
+2. Updates the csf/cloudflare.allow file with the new IPs.
+3. Modifies csf.allow and csf.ignore files accordingly.
+4. Restarts CSF/LFD (ConfigServer Firewall and Login Failure Daemon).
+5. Creates a daily cron job for continuous automation.
+
+### How to Run
+
+To execute the script, run the following command:
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/mhos/cloudflareip-to-csf/main/cloudflare_ip_csf.sh)
