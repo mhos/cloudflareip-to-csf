@@ -1,6 +1,7 @@
-## CloudFlare IP Update Script
+## CloudFlare IP Update Script for CSF (ConfigServer Firewall)
 
-This Bash script, created by Casey O'Connor, automates the daily update of CloudFlare IP lists on a server. It performs the following tasks:
+This Bash script, automates the daily update of CloudFlare IP lists on a server. 
+It performs the following tasks:
 
 1. Retrieves current CloudFlare IPv4 and IPv6 addresses.
 2. Updates the csf/cloudflare.allow file with the new IPs.
